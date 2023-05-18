@@ -4,8 +4,7 @@ In this project, we'll predict tomorrow's temperature and weather using python a
 Then, we'll clean the data and get it ready for machine learning. We'll build a system to make historical predictions, and add more predictors to improve the model.  We'll end with how to make next-day predictions.
 
 
-![Lifecycle
-](/github/pipenv/locked/python-version/:user/:repo)
+[![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-310/)
 ![Dependencies
 ](https://img.shields.io/badge/dependencies-none-brightgreen.svg?style=flat)
 
