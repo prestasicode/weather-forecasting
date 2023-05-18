@@ -1,20 +1,16 @@
 # Weather Forecasting
-In this project, we'll predict tomorrow's temperature and weather using python and historical data. We'll start by downloading a dataset of local weather by BMKG.
-
-Then, we'll clean the data and get it ready for machine learning. We'll build a system to make historical predictions, and add more predictors to improve the model.  We'll end with how to make next-day predictions.
-
 
 [![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-310/)
 ![Dependencies
 ](https://img.shields.io/badge/dependencies-none-brightgreen.svg?style=flat)
 
-ParametricWeatherModel is a repository for forecasting surface temperature
-based primarily on latitude, longitude, day of year and hour of day.
+In this project, we'll predict tomorrow's temperature and weather using python and historical data. We'll start by downloading a dataset of local weather by BMKG.
 
-The weather modeling script is less than 200 lines of python plus argument
-parsing, output and error handling.  There are no external dependencies.
+Then, we'll clean the data and get it ready for machine learning. We'll build a system to make historical predictions, and add more predictors to improve the model.  We'll end with how to make next-day predictions.
 
-If you like ParametricWeatherModel, give it a star, or fork it and contribute!
+
+Weather related information is one of the things that is very important and has a big influence on all kinds of life
+activities such as in public safety, socio-economics, agriculture, aviation, and especially when stargazing activity.
 
 Surface temperature forecast for latitude 47.6928, longitude -122.3038, day
 of year 229:
