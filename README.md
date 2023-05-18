@@ -25,11 +25,11 @@ python parametricscheme.py -h
 
 ## Details
 
-This repository contains code for a simple parameterization scheme to
-forecast the air temperature at the surface at a point over the next hour.
-It is based on chapter 2 from the book
-[Parameterization Schemes: Keys to Understanding Numerical Weather Prediction Models](https://www.cambridge.org/core/books/parameterization-schemes/C7C8EC8901957314433BE7C8BC36F16D#fndtn-information)
-by [David J. Stensrud](http://www.met.psu.edu/people/djs78).
+This repository contains datasets which mining from 
+DATA ONLINE Application - DATABASE CENTER - BMKG is a data service application for users, 
+both for internal BMKG circles and external groups consisting of Universities, Institutions of 
+Ministries/Agencies, Private and Community MKKuG data users.
+[source](https://dataonline.bmkg.go.id/home)
 
 According to [wikipedia](https://en.wikipedia.org/wiki/Parametrization_(atmospheric_modeling)):
 A parameterization scheme "in a weather or climate model in the context of
