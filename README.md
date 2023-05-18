@@ -31,40 +31,27 @@ both for internal BMKG circles and external groups consisting of Universities, I
 Ministries/Agencies, Private and Community MKKuG data users.
 [source](https://dataonline.bmkg.go.id/home)
 
-According to [wikipedia](https://en.wikipedia.org/wiki/Parametrization_(atmospheric_modeling)):
-A parameterization scheme "in a weather or climate model in the context of
-numerical weather prediction is a method of replacing processes that are too
-small-scale or complex to be physically represented in the model by a
-simplified process."  The obvious risk with this approach is producing an
-over-determined model.
+One of the most important factors in model development is weather and climate parameters in a waters. 
+Weather and climate greatly affect the pattern of water circulation and the process of transferring heat from the air to the sea surface. 
+Therefore, measurement of weather field data is needed to find out the characteristics of the weather in certain waters. 
+Weather data that has been collected over a long period of time will provide information on climate conditions in these waters and produce climatological data. 
+These weather and climate data are needed as boundary conditions in modeling where current generating forces and energy transfer between the air and the water surface are important.
 
-The python code models the following radiative processes:
-  * Incoming solar radiation
-  * Upwelling longwave radiation from the surface
-  * Downwelling longwave radiation from the atmosphere
-  * Ground heat flux (heat transfer from the ground surface into the deeper soil levels)
-  * Sensible heat flux (heat transfer per unit area from the ground to the atmosphere)
-  * Latent heat flux (rate of moisture transfer per unit area from the ground surface to the atmosphere)
+### Features
+
+Acquisition of weather and climate field measurement data using equipment with an integrated system. All sensors used are installed in a series of tools and recorded automatically. The data recording time interval can be set and the process of averaging or summing can be done for a certain time unit.
+
+The weather forecast models the following features as parameters:
+  * Wind
+  * Air Temperature
+  * Rainfall or Precipitation
+  * Air Humidity
+  * Air Humidity
+  * Sun Intensity
 
 There are two options for calculating the sensible heat flux:
   1) The default method uses percent of net radiation ( --percent_net_radiation )
   2) The experimental method uses resistance to heat flux ( --resistance )
-
-To use the experimental method the percent of net radiation must be set to 0:
-```sh
-# Using short options
-python parametricscheme.py -la 47.6928 -lo -122.3038 -da 229 -gt 54 -st 72 -pr 0 -rh 1000 -de F
-
-# The same using long options
-python parametricscheme.py --latitude 47.6928 --longitude -122.3038 --day_of_year 229 --ground_temp 54 --surface_temp 72 --percent_net_radiation 0 --resistance 1000 --degrees F
-```
-
-Equation and page numbers in the python code refer to
-[Parameterization Schemes: Keys to Understanding Numerical Weather Prediction Models](https://doi.org/10.1017/CBO9780511812590)
-by [David J. Stensrud](http://www.met.psu.edu/people/djs78).
-
-The local hour of the sun approximation is from:
-[pveducation.org](https://www.pveducation.org/pvcdrom/properties-of-sunlight/solar-time)
 
 ### Parameters
 
