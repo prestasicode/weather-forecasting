@@ -12,30 +12,6 @@ Then, we'll clean the data and get it ready for machine learning. We'll build a 
 Weather related information is one of the things that is very important and has a big influence on all kinds of life
 activities such as in public safety, socio-economics, agriculture, aviation, and especially when stargazing activity.
 
-Surface temperature forecast for latitude 47.6928, longitude -122.3038, day
-of year 229:
-
- Temperature prediction    | Radiative processes
-:-------------------------:|:-------------------------:
-![](https://github.com/makeyourownmaker/ParametricWeatherModel/blob/master/figures/ParametricWeatherTemperature.01.png) |  ![](https://github.com/makeyourownmaker/ParametricWeatherModel/blob/master/figures/ParametricWeatherRadiativeProcesses.01.png)
-
-
-## Usage
-
-Predict surface temperature at specified latitude, longitude, day of year,
-ground temperature and initial surface temperature:
-```sh
-# Using short options
-python parametricscheme.py -la 47.6928 -lo -122.3038 -da 229 -gt 54 -st 72 -pr 0.2 -de F
-
-# The same using long options
-python parametricscheme.py --latitude 47.6928 --longitude -122.3038 --day_of_year 229 --ground_temp 54 --surface_temp 72 --percent_net_radiation 0.2 --degrees F
-
-# To list all command line options
-python parametricscheme.py -h
-```
-
-
 ## Installation
 
 Requires a recent version of python (either 2 or 3 should work).
