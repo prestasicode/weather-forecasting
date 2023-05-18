@@ -32,6 +32,13 @@ from sklearn.model_selection import train_test_split # for splitting the data in
 from sklearn.metrics import mean_squared_error # for model evaluation metrics
 from sklearn.preprocessing import MinMaxScaler # for feature scaling
 
+#env-output-googlecolaboratory
+#pandas: 1.5.3
+#numpy: 1.22.4
+#plotly: 5.13.1
+#Tensorflow/Keras: 2.12.0
+#sklearn: 1.2.2
+
 import pandas as pd
 data = pd.read_csv("acc_data.csv", index_col="Tanggal")
 data.apply(pd.isnull).sum()/data.shape[0]
