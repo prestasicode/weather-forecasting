@@ -43,5 +43,29 @@ import pandas as pd
 data = pd.read_csv("acc_data.csv", index_col="Tanggal")
 data.apply(pd.isnull).sum()/data.shape[0]
 
-core_weather = data[["Tx", "Tx", "Tavg", "RH_avg", "RR", "ss", "ff_x", "ddd_x", "ff_avg", "ddd_car"]].copy()
-core_weather.columns = ["temp_min", "temp_max", "temp_avg", "humidity", "precipitation", "sunshine", "wind_speed_max", "wind_direction", "wind_speed_avg", "wind_dir_max"]
+dataset = data[["Tx", "Tx", "Tavg", "RH_avg", "RR", "ss", "ff_x", "ddd_x", "ff_avg", "ddd_car"]].copy()
+dataset.columns = ["temp_min", "temp_max", "temp_avg", "humidity", "precipitation", "sunshine", "wind_speed_max", "wind_direction", "wind_speed_avg", "wind_dir_max"]
+
+from transformers import TrainingArguments, Trainer
+
+epochs = 5
+batch_size = 512
+
+# Define our training job.
+training_args = TrainingArguments(
+    output_dir="checkpoints",
+    per_device_train_batch_size=batch_size,
+    per_device_eval_batch_size=batch_size,
+    num_train_epochs=epochs,
+    logging_strategy="epoch",
+    evaluation_strategy="epoch",
+)
+trainer = Trainer(
+    model,
+    training_args,
+    train_dataset=dataset["train"],
+    eval_dataset=dataset["test"],
+)
+
+# Run the training job.
+trainer.train()
