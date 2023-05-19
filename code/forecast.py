@@ -46,6 +46,27 @@ data.apply(pd.isnull).sum()/data.shape[0]
 dataset = data[["Tx", "Tx", "Tavg", "RH_avg", "RR", "ss", "ff_x", "ddd_x", "ff_avg", "ddd_car"]].copy()
 dataset.columns = ["temp_min", "temp_max", "temp_avg", "humidity", "precipitation", "sunshine", "wind_speed_max", "wind_direction", "wind_speed_avg", "wind_dir_max"]
 
+#tensorflow library
+def wx_input_fn(X, y=None, num_epochs=None, shuffle=True, batch_size=260): # 260 is used as we have approx 570 dataset for training
+    return tf.estimator.inputs.pandas_input_fn(x=X,
+                                               y=y,
+                                               num_epochs=num_epochs,
+                                               shuffle=shuffle,
+                                               batch_size=batch_size)
+evaluations = []
+STEPS = 260
+for i in range(100):
+    regressor.train(input_fn=wx_input_fn(X_train, y=y_train), steps=STEPS)
+    evaluation = regressor.evaluate(input_fn=wx_input_fn(X_val, y_val,
+                                                         num_epochs=1,
+                                                         shuffle=False),
+                                    steps=1)
+    evaluations.append(regressor.evaluate(input_fn=wx_input_fn(X_val,
+                                                               y_val,
+                                                               num_epochs=1,
+                                                               shuffle=False)))
+
+#keras library
 from transformers import TrainingArguments, Trainer
 
 epochs = 5
