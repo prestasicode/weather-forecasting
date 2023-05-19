@@ -18,8 +18,8 @@ Requires a recent version of python (either 2 or 3 should work).
 
 The following should work on any unix-ish environment:
 ```sh
-wget https://raw.githubusercontent.com/makeyourownmaker/ParametricWeatherModel/master/parametricscheme.py
-python parametricscheme.py -h
+wget https://raw.githubusercontent.com/ .. soon
+python file.py -h
 ```
 
 
