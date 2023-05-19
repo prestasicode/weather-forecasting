@@ -49,7 +49,7 @@ The weather forecast models the following features as parameters:
   * Sun Intensity
 
 There are several limitations:
-  1) this project happen to find out more about forecasting and how it can be used to help astronomers and stargazers plan when to get the best views of the night sky.
+  1) This project happen to find out more about forecasting and how it can be used to help astronomers and stargazers plan when to get the best views of the night sky.
   2) There's using BMKG data that provide weather time-series periode that happen in one-hour increments.
 
 ### Parameters
