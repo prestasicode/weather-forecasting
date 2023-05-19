@@ -46,7 +46,6 @@ The weather forecast models the following features as parameters:
   * Air Temperature
   * Rainfall or Precipitation
   * Air Humidity
-  * Air Humidity
   * Sun Intensity
 
 There are two options for calculating the sensible heat flux:
