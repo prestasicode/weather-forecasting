@@ -69,3 +69,7 @@ trainer = Trainer(
 
 # Run the training job.
 trainer.train()
+
+# Pipeline for save model
+trainer.save_model("model")
+!ls -lh model
