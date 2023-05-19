@@ -48,9 +48,9 @@ The weather forecast models the following features as parameters:
   * Air Humidity
   * Sun Intensity
 
-There are two options for calculating the sensible heat flux:
-  1) The default method uses percent of net radiation ( --percent_net_radiation )
-  2) The experimental method uses resistance to heat flux ( --resistance )
+There are several limitations:
+  1) this project happen to find out more about forecasting and how it can be used to help astronomers and stargazers plan when to get the best views of the night sky.
+  2) There's using BMKG data that provide weather time-series periode that happen in one-hour increments.
 
 ### Parameters
 
