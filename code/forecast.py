@@ -48,8 +48,13 @@ dataset.columns = ["temp_min", "temp_max", "temp_avg", "humidity", "precipitatio
 #EDA
 fig1 = px.line(data, x="date", 
                  y="temp_max", 
-                 title='Mean Temperature in Delhi Over the Years')
+                 title='Mean Temperature in Tangerang Over the Years')
 fig.show()
+
+fig2 = px.line(data, x="date", 
+                 y="humidity", 
+                 title='Humidity in Tangerang Over the Years')
+fig2.show()
 
 #tensorflow library
 def wx_input_fn(X, y=None, num_epochs=None, shuffle=True, batch_size=260): # 260 is used as we have approx 570 dataset for training
