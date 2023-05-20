@@ -39,12 +39,17 @@ from sklearn.preprocessing import MinMaxScaler # for feature scaling
 #Tensorflow/Keras: 2.12.0
 #sklearn: 1.2.2
 
-import pandas as pd
 data = pd.read_csv("acc_data.csv", index_col="Tanggal")
 data.apply(pd.isnull).sum()/data.shape[0]
 
 dataset = data[["Tx", "Tx", "Tavg", "RH_avg", "RR", "ss", "ff_x", "ddd_x", "ff_avg", "ddd_car"]].copy()
 dataset.columns = ["temp_min", "temp_max", "temp_avg", "humidity", "precipitation", "sunshine", "wind_speed_max", "wind_direction", "wind_speed_avg", "wind_dir_max"]
+
+#EDA
+fig1 = px.line(data, x="date", 
+                 y="temp_max", 
+                 title='Mean Temperature in Delhi Over the Years')
+fig.show()
 
 #tensorflow library
 def wx_input_fn(X, y=None, num_epochs=None, shuffle=True, batch_size=260): # 260 is used as we have approx 570 dataset for training
