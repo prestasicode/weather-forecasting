@@ -56,6 +56,12 @@ fig2 = px.line(data, x="date",
                  title='Humidity in Tangerang Over the Years')
 fig2.show()
 
+#analyze data
+data["date"] = pd.to_datetime(data["date"], format = '%Y-%m-%d')
+data['year'] = data['date'].dt.year
+data["month"] = data["date"].dt.month
+print(data.head())
+
 #tensorflow library
 def wx_input_fn(X, y=None, num_epochs=None, shuffle=True, batch_size=260): # 260 is used as we have approx 570 dataset for training
     return tf.estimator.inputs.pandas_input_fn(x=X,
